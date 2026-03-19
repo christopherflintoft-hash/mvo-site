@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Vast Oceans | AI Strategy & Transformation</title>
+
+<meta property="og:title" content="My Vast Oceans | AI Strategy & Transformation">
+<meta property="og:description" content="AI is ready. Your data probably isn't. We help leadership teams find their bearing and move with confidence into uncharted territory.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myvastoceans.com">
+<meta property="og:image" content="https://myvastoceans.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Vast Oceans | AI Strategy & Transformation">
+<meta name="twitter:description" content="AI is ready. Your data probably isn't.">
+<meta name="description" content="My Vast Oceans is a specialist AI advisory helping businesses navigate uncharted territory. Strategy, readiness, transformation.">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --deep-night: #0B0F1A;
+    --dark-water: #111827;
+    --midnight: #1E3A5F;
+    --brass: #B49B6E;
+    --brass-dark: #8A7A55;
+    --parchment: #F5F0EA;
+    --stone: #A09A90;
+    --weathered: #6A645C;
+    --faint: #4A4640;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--deep-night);
+    color: var(--parchment);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--deep-night); }
+  ::-webkit-scrollbar-thumb { background: var(--faint); border-radius: 3px; }
+
+  /* Nav */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(11, 15, 26, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(180, 155, 110, 0.06);
+  }
+
+  .logo {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--parchment);
+  }
+  .logo span { color: var(--brass); }
+
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--weathered);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--brass); }
+
+  .nav-cta {
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    border: 1px solid rgba(180, 155, 110, 0.3);
+    color: var(--brass);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover {
+    background: var(--brass);
+    color: var(--deep-night);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(180, 155, 110, 0.03) 0%, transparent 60%);
+    animation: breathe 10s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  }
+
+  .hero-content { position: relative; max-width: 740px; }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--brass);
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.75rem;
+    letter-spacing: -0.5px;
+    color: var(--parchment);
+  }
+
+  .hero h1 .brass { color: var(--brass); }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    color: var(--stone);
+    max-width: 580px;
+    margin: 0 auto 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    color: var(--weathered);
+    max-width: 520px;
+    margin: 0 auto 2.75rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.25rem;
+    background: var(--brass);
+    color: var(--deep-night);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid var(--brass);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--brass);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2.25rem;
+    background: transparent;
+    color: var(--weathered);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid rgba(106, 100, 92, 0.3);
+    margin-left: 1rem;
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    color: var(--parchment);
+    border-color: var(--parchment);
+  }
+
+  /* Sections */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--brass);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--parchment);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+  }
+
+  .section-subtitle {
+    color: var(--stone);
+    font-size: 1rem;
+    max-width: 600px;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 3.5rem;
+  }
+
+  /* Problem section */
+  .problem-section {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.3) 0%, rgba(11, 15, 26, 0) 100%);
+    border-top: 1px solid rgba(180, 155, 110, 0.06);
+    border-bottom: 1px solid rgba(180, 155, 110, 0.06);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .problem-text h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: var(--parchment);
+  }
+
+  .problem-text p {
+    color: var(--stone);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+  }
+
+  .problem-text p strong {
+    color: var(--parchment);
+    font-weight: 500;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-card {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(180, 155, 110, 0.08);
+    border-radius: 8px;
+    padding: 1.75rem;
+  }
+
+  .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.25rem;
+    color: var(--brass);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--weathered);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  /* Pull quote */
+  .pull-quote-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    position: relative;
+  }
+
+  .pull-quote-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(180, 155, 110, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .pull-quote {
+    position: relative;
+    max-width: 660px;
+    margin: 0 auto;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--parchment);
+    letter-spacing: -0.3px;
+  }
+
+  .pull-quote .brass { color: var(--brass); }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: rgba(17, 24, 39, 0.35);
+    border: 1px solid rgba(180, 155, 110, 0.08);
+    border-radius: 8px;
+    padding: 2.25rem;
+    transition: all 0.3s;
+  }
+  .service-card:hover {
+    border-color: rgba(180, 155, 110, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .service-num {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--brass);
+    margin-bottom: 1.25rem;
+    letter-spacing: 1px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--parchment);
+  }
+
+  .service-card p {
+    color: var(--stone);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  /* Approach */
+  .approach-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .step {
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--brass);
+  }
+
+  .step-num {
+    font-size: 0.65rem;
+    color: var(--brass);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--parchment);
+  }
+
+  .step p {
+    font-size: 0.85rem;
+    color: var(--stone);
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+  /* Sectors */
+  .sectors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .sector-tag {
+    padding: 0.5rem 1.25rem;
+    background: rgba(17, 24, 39, 0.4);
+    border: 1px solid rgba(180, 155, 110, 0.1);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: var(--stone);
+    font-weight: 400;
+    transition: all 0.3s;
+  }
+  .sector-tag:hover {
+    border-color: rgba(180, 155, 110, 0.25);
+    color: var(--parchment);
+  }
+
+  /* Experience bar */
+  .experience-section {
+    background: rgba(17, 24, 39, 0.2);
+    border-top: 1px solid rgba(180, 155, 110, 0.06);
+    border-bottom: 1px solid rgba(180, 155, 110, 0.06);
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .exp-item {
+    text-align: center;
+  }
+
+  .exp-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--brass);
+    margin-bottom: 0.35rem;
+  }
+
+  .exp-label {
+    font-size: 0.8rem;
+    color: var(--weathered);
+    font-weight: 300;
+  }
+
+  /* Divider */
+  .divider {
+    max-width: 1080px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid rgba(180, 155, 110, 0.06);
+  }
+
+  /* Contact */
+  .contact-section {
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+
+  .contact-section .section-subtitle {
+    margin: 0 auto 2.5rem;
+  }
+
+  .contact-email {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--weathered);
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 1px solid rgba(106, 100, 92, 0.3);
+    padding-bottom: 2px;
+  }
+  .contact-email:hover { color: var(--brass); border-color: var(--brass); }
+
+  .contact-links {
+    margin-top: 2rem;
+  }
+  .contact-links a {
+    color: var(--faint);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s;
+    margin: 0 1rem;
+  }
+  .contact-links a:hover { color: var(--brass); }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(180, 155, 110, 0.04);
+    color: var(--faint);
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .problem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .approach-steps { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .btn-secondary { margin-left: 0; margin-top: 0.75rem; display: block; text-align: center; }
+    .experience-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 480px) {
+    .approach-steps { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 5rem 1.5rem 3rem; }
+    nav { padding: 1rem 1.25rem; }
+    .experience-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">my vast <span>oceans</span></div>
+  <ul class="nav-links">
+    <li><a href="#problem">The Reality</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">AI Strategy & Transformation</div>
+    <h1>AI is ready.<br><span class="brass">Your data probably isn't.</span></h1>
+    <p class="hero-lead">Most businesses don't have an AI problem. They have a readiness problem, a data problem, and a "where do we actually start" problem.</p>
+    <p class="hero-sub">We help leadership teams find their bearing, chart a course, and move with confidence into uncharted territory.</p>
+    <a href="#contact" class="btn-primary">Start a conversation</a>
+    <a href="#problem" class="btn-secondary">The real problem</a>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="problem-section" style="padding: 6rem 2rem;">
+  <div class="problem-grid">
+    <div class="problem-text">
+      <div class="section-label">The Reality</div>
+      <h2>Everyone is talking about AI. Very few are ready for it.</h2>
+      <p>The technology has arrived. Large language models, autonomous agents, generative tools. They're powerful, accessible, and getting better every quarter. That's not the hard part anymore.</p>
+      <p><strong>The hard part is everything underneath.</strong> Your data is fragmented across dozens of systems. Your teams don't have a shared view of what's true. Your processes were built for a world that didn't have these tools.</p>
+      <p>Bolting AI onto that foundation doesn't create value. It creates expensive confusion.</p>
+      <p>The businesses getting real ROI from AI right now aren't the ones moving fastest. They're the ones who understood what needed to be true about their data, their operations, and their people <strong>before they built anything.</strong></p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number">73%</div>
+        <div class="stat-label">of AI projects fail to move beyond pilot stage</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">80%</div>
+        <div class="stat-label">of the work in any AI project is data preparation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5x</div>
+        <div class="stat-label">more likely to succeed with a clear data strategy first</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">years building at technology inflection points</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote-section">
+  <p class="pull-quote">AI doesn't create value. It <span class="brass">unlocks what's already there.</span><br>But only if you know where to look.</p>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Three ways we work with you</h2>
+  <p class="section-subtitle">Every engagement starts with understanding where you actually are. Not where a vendor tells you that you should be.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <h3>AI Strategy & Readiness</h3>
+      <p>We assess your data maturity, map your operational landscape, and identify where AI will generate real return. Not a generic playbook. A strategy built around your business, your data, and your competitive position. You'll know exactly where to start and why.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <h3>Fractional AI Leadership</h3>
+      <p>Embedded executive leadership without the full-time overhead. We sit inside your team, drive the AI agenda, align stakeholders, manage vendors, and make sure things actually ship. Think of it as a Chief AI Officer on your terms.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <h3>Transformation & Capital Advisory</h3>
+      <p>For businesses preparing to raise, exit, or navigate a major technology transition. We help you build the narrative, pressure-test the strategy, and connect with a network of trusted delivery partners when it's time to build.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="section-label">How We Work</div>
+  <h2 class="section-title">Clarity before code</h2>
+  <p class="section-subtitle">We've been through enough technology cycles to know what separates real transformation from expensive experiments.</p>
+
+  <div class="approach-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Understand</h3>
+      <p>We start with your business, not the technology. Where does value sit today? Where is it leaking? What does your data actually look like?</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Prioritise</h3>
+      <p>Not everything needs AI. We identify the highest-impact opportunities and build a sequence that delivers early wins while setting up long-term value.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Mobilise</h3>
+      <p>Clear roadmap, right partners, realistic timeline. We move in weeks not quarters. Short sprints, fast validation, clear decision points.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>Sustain</h3>
+      <p>Anything we help build is designed to be owned by your team. No dependency, no black boxes. If AI isn't the answer, we'll tell you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE BAR -->
+<section class="experience-section" style="padding: 4rem 2rem;">
+  <div class="experience-grid">
+    <div class="exp-item">
+      <div class="exp-number">25+</div>
+      <div class="exp-label">Years in digital & technology</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-number">5</div>
+      <div class="exp-label">Technology cycles navigated</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-number">3</div>
+      <div class="exp-label">Businesses founded & exited</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-number">40+</div>
+      <div class="exp-label">Countries operated across</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <div class="section-label">Where We Operate</div>
+  <h2 class="section-title">Deep experience where it matters</h2>
+  <p class="section-subtitle">We've built and scaled businesses across industries where data, relationships, and operational complexity intersect.</p>
+
+  <div class="sectors">
+    <span class="sector-tag">Healthcare</span>
+    <span class="sector-tag">Media & Sport</span>
+    <span class="sector-tag">Commercial Property</span>
+    <span class="sector-tag">Creator Economy</span>
+    <span class="sector-tag">SaaS & Platforms</span>
+    <span class="sector-tag">Ecommerce</span>
+    <span class="sector-tag">Retail & Consumer</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Ready to find your bearing?</h2>
+  <p class="section-subtitle">Whether you're exploring AI for the first time, preparing to raise, or need someone to take the helm on your AI strategy, we'd like to hear from you.</p>
+  <a href="mailto:christopher@myvastoceans.com" class="btn-primary">Start a conversation</a>
+  <br>
+  <a href="mailto:christopher@myvastoceans.com" class="contact-email">christopher@myvastoceans.com</a>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/christopherflintoft" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 My Vast Oceans. All rights reserved.
+</footer>
+
+</body>
+</html>
